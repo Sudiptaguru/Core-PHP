@@ -64,7 +64,7 @@ if (isset($_REQUEST['admin']) && $_REQUEST['admin'] == 1) {
 					<td><a href="edit.php?id=<?php echo $data['id']; ?>">Edit</a> ||
 						<a href="delete.php?id=<?php echo $data['id']; ?>">Delete</a>
 					</td>
-					<td><a href="active_deactive.php?id=<?php echo $data['id']; ?>">
+					<td><a onclick="return confirm('Are you sure')" href="active_deactive.php?id=<?php echo $data['id']; ?>">
 							<?php
 							if ($data['status'] == 1) {
 								echo "Active";
